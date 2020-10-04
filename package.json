@@ -1,0 +1,83 @@
+{
+  "name": "currency-converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
+    "build": "webpack --config ./build/webpack.build.conf.js"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "airbnb"
+    ],
+    "rules": {
+      "no-console": 0,
+      "import/extensions": 0,
+      "react/prop-types": 0
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-ismailov/currency-converter.git"
+  },
+  "keywords": [
+    "webpack",
+    "template"
+  ],
+  "author": "Alexander Ismailov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alex-ismailov/currency-converter/issues"
+  },
+  "homepage": "https://github.com/alex-ismailov/currency-converter#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "autoprefixer": "^9.8.6",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.1.1",
+    "css-loader": "^4.3.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "enzyme-to-json": "^3.6.1",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.2",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.5.0",
+    "jest": "^26.4.2",
+    "mini-css-extract-plugin": "^0.11.2",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^4.0.2",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "vue-loader": "^15.9.3",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.4"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
