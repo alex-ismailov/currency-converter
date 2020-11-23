@@ -1,0 +1,36 @@
+.converter {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  @include media('tableWidth') {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__currency {
+    &__input,
+    &__select {
+      height: 40px;
+      font-size: 15px;
+      border: 1px solid #000;
+      outline: none;
+      background-color: #e7e7e7;
+      padding: 0 10px;
+    }
+
+    &__input {
+      width: 200px;
+      border-radius: 6px 0 0 6px;
+    }
+
+    &__select {
+      border-radius: 0 6px 6px 0;
+      margin-left: -5px;
+    }
+  }
+
+  i {
+    padding: 10px;
+  }
+}
