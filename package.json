@@ -81,6 +81,8 @@
     "bootstrap": "^4.5.3",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5"
   }
 }
