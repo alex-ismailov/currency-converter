@@ -12,10 +12,7 @@
 //   form: {
 //     baseValue: 0,
 //     newValue: 0,
-//   },
-//   state: {
-//     process: 'filling', // processing
-//     isDisabledBtn: false,
+//     processState: 'filing',
 //   },
 // };
 // Возможно state.state стоит распределить по state.form
