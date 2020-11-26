@@ -9,7 +9,7 @@ publish:
 lint:
 	npx eslint --ext .jsx ./src/
 
-lint_fix:
+lint-fix:
 	npx eslint --fix --ext .jsx ./src/
 
 log:
