@@ -17,6 +17,16 @@
 // };
 // Возможно state.state стоит распределить по state.form
 
+// Пока идея такая: При смене state.currency.base запрашиваем новую data:
+// axios.get('https://api.exchangeratesapi.io/latest?base=# new state.currency.base #');
+
+// TODO !!!: Кэширование, использ.подсказки от Александр Усков из слак:
+// - можно использовать внутренние хранилища браузера (indexedDB) и хранить дату последнего обновления.
+//   обновлять при истечении срока давности, кеширование обычно делается так.
+// - можно использовать localStorage, смотря сколько данны надо хранить.
+//   В принципе суть одна, и localStorage чуть больше поддерживается.
+// - у LocalStorage есть ограничение по размеру. Если вы в него вписываетесь, то его достаточно.
+
 import { combineReducers } from 'redux';
 import { handleActions } from 'redux-actions';
 import * as actions from '../actions/index.js';
