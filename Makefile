@@ -12,5 +12,5 @@ lint:
 lint-fix:
 	npx eslint --fix --ext .jsx ./src/
 
-log:
+logs:
 	git log --oneline --decorate --graph --all
