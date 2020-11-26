@@ -11,17 +11,6 @@
     "> 1%",
     "last 3 version"
   ],
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "airbnb"
-    ],
-    "rules": {
-      "no-console": 0,
-      "import/extensions": 0,
-      "react/prop-types": 0
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alex-ismailov/currency-converter.git"
@@ -58,7 +47,7 @@
     "eslint-plugin-flowtype": "^5.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.21.2",
+    "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.1.2",
     "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.5.0",
