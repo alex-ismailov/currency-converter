@@ -47,8 +47,8 @@ const initStateTest = {
     new: 'USD',
   },
   form: {
-    baseValue: 0,
-    newValue: 0,
+    baseValue: '',
+    newValue: '',
     processState: 'filing',
   },
 };
@@ -64,7 +64,6 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <App />
-    {/* <Form /> */}
   </Provider>,
   document.getElementById('root'),
 );
