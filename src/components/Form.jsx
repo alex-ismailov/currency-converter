@@ -14,13 +14,26 @@ const actionCreators = {
 };
 
 class Form extends React.Component {
+  static defaultV
+  
+  handleInputBaseCurrency = (e) => {
+    const { target: { value } } = e;
+    const { updateBaseCurrencyValue } = this.props;
+    updateBaseCurrencyValue({ baseValue: value });
+  };
+
+  handleInputNewCurrency = (e) => {
+    const { target: { value } } = e;
+    const { updateNewCurrencyValue } = this.props;
+    updateNewCurrencyValue({ newValue: value });
+  };
+
   render() {
-    console.log(this.props);
     const {
       currency,
       form,
-      updateBaseCurrencyValue,
-      updateNewCurrencyValue,
+      // updateBaseCurrencyValue,
+      // updateNewCurrencyValue,
     } = this.props;
     const currenciesKeys = Object.keys(currency.rates);
 
@@ -29,14 +42,16 @@ class Form extends React.Component {
         <CurrencyItem
           currency={currency.base}
           value={form.baseValue}
-          handleInput={updateBaseCurrencyValue}
+          handleInput={this.handleInputBaseCurrency}
+          // onChange={this.handleInputBaseCurrency}
           currenciesKeys={currenciesKeys}
         />
         <i className="fas fa-exchange-alt" />
         <CurrencyItem
           currency={currency.new}
           value={form.newValue}
-          handleInput={updateNewCurrencyValue}
+          handleInput={this.handleInputNewCurrency}
+          // onChange={this.handleInputNewCurrency}
           currenciesKeys={currenciesKeys}
         />
       </form>
