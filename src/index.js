@@ -49,7 +49,7 @@ const initStateTest = {
   form: {
     baseValue: '',
     newValue: '',
-    processState: 'filing',
+    processState: 'filling',
   },
 };
 
