@@ -46,8 +46,8 @@ const defaultState = {
     new: '',
   },
   form: {
-    baseValue: 0,
-    newValue: 0,
+    baseValue: '',
+    newValue: '',
     processState: '',
   },
 };
