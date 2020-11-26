@@ -1,10 +1,12 @@
 import React from 'react';
 import Form from './Form.jsx';
 
-export default () => (
+const App = () => (
   <div className="container">
     <main className="wrapper">
       <Form />
     </main>
   </div>
 );
+
+export default App;
