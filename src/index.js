@@ -47,8 +47,8 @@ const initStateTest = {
     new: 'USD',
   },
   form: {
-    baseValue: '',
-    newValue: '',
+    baseValue: 0,
+    newValue: 0,
     processState: 'filing',
   },
 };
