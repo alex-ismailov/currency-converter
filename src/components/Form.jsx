@@ -14,8 +14,6 @@ const actionCreators = {
 };
 
 class Form extends React.Component {
-  // static defaultV
-  
   handleInputBaseCurrency = (e) => {
     const { target: { value } } = e;
     const { updateBaseCurrencyValue } = this.props;
