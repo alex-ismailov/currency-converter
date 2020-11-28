@@ -24,7 +24,7 @@
     16:1  error  Component should be written as a pure function  react/prefer-stateless-function
       ✖ 1 problem (1 error, 0 warnings)
 
-- Расчет будет производится по нажатию кнопки, а не по событию input
+- Расчет будет производится по вводу в левый (base currency) input.
 
 - Закэшировать полученные данные
 
