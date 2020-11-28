@@ -13,6 +13,8 @@ const actionCreators = {
   updateProcessState: actions.updateProcessState,
 };
 
+const exchange = (baseValue, rate) => baseValue * rate;
+
 class Form extends React.Component {
   handleInputBaseCurrency = (e) => {
     const { target: { value } } = e;
