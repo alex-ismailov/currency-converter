@@ -18,8 +18,18 @@ const exchange = (baseValue, rate) => baseValue * rate;
 class Form extends React.Component {
   handleInputBaseCurrency = (e) => {
     const { target: { value } } = e;
-    const { updateBaseCurrencyValue } = this.props;
+    const { 
+      updateBaseCurrencyValue,
+      currency,
+      updateNewCurrencyValue,
+    } = this.props;
     updateBaseCurrencyValue({ baseValue: value });
+
+    // перводим в новую валюту
+    const rate = currency.rates[currency.new];
+    const newValue = exchange(value, rate);
+    console.log(newValue);
+    updateNewCurrencyValue({ newValue });
   };
 
   handleInputNewCurrency = (e) => {
