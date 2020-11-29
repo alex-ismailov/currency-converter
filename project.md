@@ -24,7 +24,27 @@
     16:1  error  Component should be written as a pure function  react/prefer-stateless-function
       ✖ 1 problem (1 error, 0 warnings)
 
-- Расчет будет производится по вводу в левый (base currency) input.
++ Расчет будет производится по вводу в левый (base currency) input.
+
+- Перепроектировать state так чтобы при вводе в один из input
+  соседний выводил расчет в указанной в его select валюте.
+state = {
+  form: {
+    leftInputValue: 0,
+    leftInputValue: 0,
+  },
+  currency: {
+    base: {
+      name: 'RUB',
+      rates: {...},
+      ....
+    },
+    new: {
+      name: 'USD',
+    }
+  },
+  state: {},
+};
 
 - Закэшировать полученные данные
 
