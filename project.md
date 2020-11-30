@@ -28,10 +28,15 @@
 
 - Перепроектировать state так чтобы при вводе в один из input
   соседний выводил расчет в указанной в его select валюте.
+
+за основу возьму вот такой state:
+
 state = {
   form: {
     leftInputValue: 0,
-    leftInputValue: 0,
+    leftSelectCurrency: 'RUB',
+    rightInputValue: 0,
+    leftSelectCurrency: 'USD',
   },
   currency: {
     base: {
@@ -43,7 +48,9 @@ state = {
       name: 'USD',
     }
   },
-  state: {},
+  state: {
+    ???
+  },
 };
 
 - Закэшировать полученные данные
