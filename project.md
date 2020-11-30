@@ -53,6 +53,10 @@ state = {
   },
 };
 
+если вводим в левый input (baseCurrency), то baseValue * rate
+если вводим в правый input (newCurrency), то newCurrency / rate
+
+
 - Закэшировать полученные данные
 
 /* init Test State */
