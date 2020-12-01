@@ -16,9 +16,9 @@ const defaultState = {
   // },
 };
 
-const currency = handleActions({
-    [changeBaseCurrency]: (state, { payload: { baseCurrency }}) => {
-      return { ...state, base: baseCurrency };
+const baseCurrency = handleActions({
+    [updateBaseCurrency]: (state, { payload: { updatedBaseCurrency }}) => {
+      return { ...state, baseCurrency: updatedBaseCurrency };
     },
     [changeNewCurrency]: (state, { payload: { newCurrency }}) => {
       return { ...state, new: newCurrency };
