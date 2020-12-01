@@ -10,6 +10,7 @@ const actionCreators = {
   updateLeftInput: actions.updateLeftInput,
   updateRightInput: actions.updateRightInput,
   updateLeftSelect: actions.updateLeftSelect,
+  updateRightSelect: actions.updateRightSelect,
   // updateProcessState: actions.updateProcessState,
 };
 
