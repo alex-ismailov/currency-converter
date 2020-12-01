@@ -63,6 +63,11 @@ class Form extends React.Component {
     updateLeftInput({ leftInputValue: exchangedValue});
   };
 
+  componentDidMount() {
+    const rightInput = document.getElementById('baseCurrencyInput');
+    rightInput.focus();
+  }
+
   render() {
     const {
       currency,
