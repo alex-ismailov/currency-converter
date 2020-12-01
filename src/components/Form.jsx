@@ -73,7 +73,8 @@ class Form extends React.Component {
       baseCurrency,
       form,
     } = this.props;
-    const currenciesKeys = Object.keys(currency.rates);
+
+    const currenciesKeys = Object.keys(baseCurrency.rates);
 
     return (
       <form className="converter" action="">
