@@ -88,11 +88,12 @@ class Form extends React.Component {
         />
         <i className="fas fa-exchange-alt" />
         <CurrencyItem
-          currency={currency.new}
-          value={form.newValue}
-          handleInput={this.handleInputNewCurrency}
-          // onChange={this.handleInputNewCurrency}
+          value={form.rightInputValue}
+          currency={form.rightSelectCurrency}
           currenciesKeys={currenciesKeys}
+          handleInput={this.handleRightInput}
+          inputId={'newCurrencyInput'}
+          selectId={'new-currency-select'}
         />
       </form>
     );
