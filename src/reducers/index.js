@@ -9,16 +9,11 @@ const {
 } = actions;
 
 const defaultState = {
-  currency: {
-    base: '',
-    rates: {},
-    new: '',
-  },
-  form: {
-    baseValue: 0,
-    newValue: 0,
-    processState: '',
-  },
+  form: {},
+  baseCurrency: {},
+  // state: {
+  //   ???
+  // },
 };
 
 const currency = handleActions({
