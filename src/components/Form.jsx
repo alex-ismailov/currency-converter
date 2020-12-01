@@ -43,10 +43,6 @@ class Form extends React.Component {
     updateRightInput({ rightInputValue: exchangedValue});
   };
 
-  handleInputNewCurrency = (e) => {
-    const { target: { value } } = e;
-    const { updateNewCurrencyValue } = this.props;
-    updateNewCurrencyValue({ newValue: value });
   };
 
   render() {
