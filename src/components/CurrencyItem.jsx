@@ -6,8 +6,10 @@ export default (props) => {
     currency,
     currenciesKeys,
     handleInput,
-    selectId,
     inputId,
+    handleSelect,
+    selectId,
+    
   } = props;
 
   return (
@@ -21,6 +23,7 @@ export default (props) => {
       />
       <select
         id={selectId}
+        onChange={handleSelect}
         value={currency}
         className="converter__currency__select"
       >
