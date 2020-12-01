@@ -35,6 +35,6 @@ const form = handleActions({
 }, defaultState.form);
 
 export default combineReducers({
-  currency,
+  baseCurrency,
   form,
 });
