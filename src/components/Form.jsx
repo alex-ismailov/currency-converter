@@ -16,12 +16,31 @@ const exchangeBaseToNew = (baseValue, rate) => baseValue * rate;
 const exchangeNewToBase = (baseValue, rate) => baseValue / rate;
 
 class Form extends React.Component {
+  handleLeftInput = (e) => {
+    const { target } = e;
+    const { updateLeftInput, updateRightInput, baseCurrency } = this.props;
+    const leftInputValue = target.value;
 
-    // перводим в новую валюту
-    const rate = currency.rates[currency.new];
-    const newValue = exchange(value, rate);
-    console.log(newValue);
-    updateNewCurrencyValue({ newValue });
+    if (!leftInputValue) {
+      updateLeftInput({ leftInputValue });
+      updateRightInput({ rightInputValue: '' });
+      return;
+    }
+
+    const baseCurrencySelect = document.getElementById('base-currency-select');
+    const currentBaseCurrency = baseCurrencySelect.value;
+
+    if (currentBaseCurrency !== baseCurrency.base) {
+      // TODO: через axios.get  получить новые ставки для выбранной валюты
+    }
+
+    const newCurrencySelect = document.getElementById('new-currency-select');
+    const currentNewCurrency = newCurrencySelect.value;
+    const rate = baseCurrency.rates[currentNewCurrency];
+    const exchangedValue = exchangeBaseToNew(leftInputValue, rate).toFixed(2);
+
+    updateLeftInput({ leftInputValue });
+    updateRightInput({ rightInputValue: exchangedValue});
   };
 
   handleInputNewCurrency = (e) => {
