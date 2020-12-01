@@ -43,6 +43,24 @@ class Form extends React.Component {
     updateRightInput({ rightInputValue: exchangedValue});
   };
 
+  handleRightInput = (e) => {
+    const { target } = e;
+    const { updateLeftInput, updateRightInput, baseCurrency } = this.props;
+    const rightInputValue = target.value;
+
+    if (!rightInputValue) {
+      updateLeftInput({ leftInputValue: '' });
+      updateRightInput({ rightInputValue });
+      return;
+    }
+
+    const newCurrencySelect = document.getElementById('new-currency-select');
+    const currentNewCurrency = newCurrencySelect.value;
+    const rate = baseCurrency.rates[currentNewCurrency];
+    const exchangedValue = exchangeNewToBase(rightInputValue, rate).toFixed(2);
+
+    updateRightInput({ rightInputValue });
+    updateLeftInput({ leftInputValue: exchangedValue});
   };
 
   render() {
