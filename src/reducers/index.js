@@ -23,14 +23,11 @@ const baseCurrency = handleActions({
 }, defaultState.baseCurrency);
 
 const form = handleActions({
-  [updateBaseCurrencyValue]: (state, { payload: { baseValue }}) => {
-    return { ...state, baseValue };
+  [updateLeftInput]: (state, { payload: { leftInputValue }}) => {
+    return { ...state, leftInputValue };
   },
-  [updateNewCurrencyValue]: (state, { payload: { newValue }}) => {
-    return { ...state, newValue };
-  },
-  [updateProcessState]: (state, { payload: { processState }}) => {
-    return { ...state, processState };
+  [updateRightInput]: (state, { payload: { rightInputValue }}) => {
+    return { ...state, rightInputValue };
   },
 }, defaultState.form);
 
