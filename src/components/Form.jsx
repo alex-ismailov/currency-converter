@@ -79,11 +79,12 @@ class Form extends React.Component {
     return (
       <form className="converter" action="">
         <CurrencyItem
-          currency={currency.base}
-          value={form.baseValue}
-          handleInput={this.handleInputBaseCurrency}
-          // onChange={this.handleInputBaseCurrency}
+          value={form.leftInputValue}
+          currency={form.leftSelectCurrency}
           currenciesKeys={currenciesKeys}
+          handleInput={this.handleLeftInput}
+          inputId={'baseCurrencyInput'}
+          selectId={'base-currency-select'}
         />
         <i className="fas fa-exchange-alt" />
         <CurrencyItem
