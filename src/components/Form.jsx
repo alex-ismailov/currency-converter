@@ -29,14 +29,16 @@ class Form extends React.Component {
       return;
     }
 
-    const baseCurrencySelect = document.getElementById('base-currency-select');
+    const baseCurrencySelect = document.getElementById('left-select');
     const currentBaseCurrency = baseCurrencySelect.value;
 
     if (currentBaseCurrency !== baseCurrency.base) {
       // TODO: через axios.get  получить новые ставки для выбранной валюты
+      console.log('You need axios bro #$%');
+      return;
     }
 
-    const newCurrencySelect = document.getElementById('new-currency-select');
+    const newCurrencySelect = document.getElementById('right-select');
     const currentNewCurrency = newCurrencySelect.value;
     const rate = baseCurrency.rates[currentNewCurrency];
     const exchangedValue = exchangeBaseToNew(leftInputValue, rate).toFixed(2);
