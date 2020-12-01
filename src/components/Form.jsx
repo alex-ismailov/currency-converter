@@ -6,11 +6,10 @@ import CurrencyItem from './CurrencyItem.jsx';
 const mapStateToProps = (state) => state;
 
 const actionCreators = {
-  changeBaseCurrency: actions.changeBaseCurrency,
-  changeNewCurrency: actions.changeNewCurrency,
-  updateBaseCurrencyValue: actions.updateBaseCurrencyValue,
-  updateNewCurrencyValue: actions.updateNewCurrencyValue,
-  updateProcessState: actions.updateProcessState,
+  updateBaseCurrency: actions.updateBaseCurrency,
+  updateLeftInput: actions.updateLeftInput,
+  updateRightInput: actions.updateRightInput,
+  // updateProcessState: actions.updateProcessState,
 };
 
 const exchange = (baseValue, rate) => baseValue * rate;
