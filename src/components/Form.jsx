@@ -9,6 +9,7 @@ const actionCreators = {
   updateBaseCurrency: actions.updateBaseCurrency,
   updateLeftInput: actions.updateLeftInput,
   updateRightInput: actions.updateRightInput,
+  updateLeftSelect: actions.updateLeftSelect,
   // updateProcessState: actions.updateProcessState,
 };
 
