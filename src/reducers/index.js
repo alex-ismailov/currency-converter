@@ -3,11 +3,9 @@ import { handleActions } from 'redux-actions';
 import * as actions from '../actions/index.js';
 
 const {
-  changeBaseCurrency,
-  changeNewCurrency,
-  updateBaseCurrencyValue,
-  updateNewCurrencyValue,
-  updateProcessState,
+  updateBaseCurrency,
+  updateLeftInput,
+  updateRightInput,
 } = actions;
 
 const defaultState = {
