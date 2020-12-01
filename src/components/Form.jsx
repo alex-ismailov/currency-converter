@@ -103,7 +103,8 @@ class Form extends React.Component {
           currenciesKeys={currenciesKeys}
           handleInput={this.handleLeftInput}
           inputId={'baseCurrencyInput'}
-          selectId={'base-currency-select'}
+          handleSelect={this.handleSelect}
+          selectId={'left-select'}
         />
         <i className="fas fa-exchange-alt" />
         <CurrencyItem
@@ -112,7 +113,8 @@ class Form extends React.Component {
           currenciesKeys={currenciesKeys}
           handleInput={this.handleRightInput}
           inputId={'newCurrencyInput'}
-          selectId={'new-currency-select'}
+          handleSelect={this.handleSelect}
+          selectId={'right-select'}
         />
       </form>
     );
