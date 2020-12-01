@@ -1,9 +1,6 @@
 import { createAction } from 'redux-actions';
 
-export const changeBaseCurrency = createAction('BASE_CURRENCY_CHANGE');
-export const changeNewCurrency = createAction('NEW_CURRENCY_CHANGE');
-
-export const updateBaseCurrencyValue = createAction('BASE_CURRENCY_VALUE_UPDATE');
-export const updateNewCurrencyValue = createAction('NEW_CURRENCY_VALUE_UPDATE');
-
-export const updateProcessState = createAction('PROCESS_STATE_UPDATE');
+export const updateBaseCurrency = createAction('BASE_CURRENCY_UPDATE');
+export const updateLeftInput = createAction('LEFT_INPUT_VALUE_UPDATE');
+export const updateRightInput = createAction('RIGHT_INPUT_VALUE_UPDATE');
+// export const updateProcessState = createAction('PROCESS_STATE_UPDATE');
