@@ -63,6 +63,21 @@ class Form extends React.Component {
     updateLeftInput({ leftInputValue: exchangedValue});
   };
 
+  handleSelect = (e) => {
+    const { target } = e;
+    const { updateLeftSelect, updateRightSelect } = this.props;
+    const selectId = target.id;
+    const [selectSide] = selectId.split('-');
+    const selectValue = target.value;
+
+    if (selectSide === 'left') {
+      updateLeftSelect({ selectValue });
+      return;
+    }
+
+    updateRightSelect({ selectValue });
+  };
+
   componentDidMount() {
     const rightInput = document.getElementById('baseCurrencyInput');
     rightInput.focus();
