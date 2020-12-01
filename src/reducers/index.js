@@ -20,10 +20,7 @@ const baseCurrency = handleActions({
     [updateBaseCurrency]: (state, { payload: { updatedBaseCurrency }}) => {
       return { ...state, baseCurrency: updatedBaseCurrency };
     },
-    [changeNewCurrency]: (state, { payload: { newCurrency }}) => {
-      return { ...state, new: newCurrency };
-    },
-}, defaultState.currency);
+}, defaultState.baseCurrency);
 
 const form = handleActions({
   [updateBaseCurrencyValue]: (state, { payload: { baseValue }}) => {
