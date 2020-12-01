@@ -58,7 +58,7 @@ class Form extends React.Component {
       return;
     }
 
-    const newCurrencySelect = document.getElementById('new-currency-select');
+    const newCurrencySelect = document.getElementById('right-select');
     const currentNewCurrency = newCurrencySelect.value;
     const rate = baseCurrency.rates[currentNewCurrency];
     const exchangedValue = exchangeNewToBase(rightInputValue, rate).toFixed(2);
