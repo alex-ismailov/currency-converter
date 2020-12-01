@@ -70,10 +70,8 @@ class Form extends React.Component {
 
   render() {
     const {
-      currency,
+      baseCurrency,
       form,
-      // updateBaseCurrencyValue,
-      // updateNewCurrencyValue,
     } = this.props;
     const currenciesKeys = Object.keys(currency.rates);
 
