@@ -7,6 +7,7 @@ const {
   updateLeftInput,
   updateRightInput,
   updateLeftSelect,
+  updateRightSelect,
 } = actions;
 
 const defaultState = {
@@ -32,6 +33,9 @@ const form = handleActions({
   },
   [updateLeftSelect]: (state, { payload: { leftSelectCurrency }}) => {
     return { ...state, leftSelectCurrency };
+  },
+  [updateRightSelect]: (state, { payload: { rightSelectCurrency }}) => {
+    return { ...state, rightSelectCurrency };
   },
 }, defaultState.form);
 
