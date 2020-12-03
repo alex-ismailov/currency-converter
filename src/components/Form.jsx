@@ -20,6 +20,13 @@ const actionCreators = {
 const exchangeBaseToNew = (baseValue, rate) => baseValue * rate;
 const exchangeNewToBase = (baseValue, rate) => baseValue / rate;
 
+const refreshBaseCurrency = async (base, updateBaseCurrencyAction, updateProcessStateAction) => {
+  const path = `${BASE_URL}${base.toUpperCase()}`;
+  const updatedBaseCurrency = await axios.get(path);
+  updateBaseCurrencyAction({ baseCurrency: updatedBaseCurrency.data });
+  updateProcessStateAction({ processState: 'filling' });
+};
+
 class Form extends React.Component {
   handleLeftInput = (e) => {
     const { target } = e;
