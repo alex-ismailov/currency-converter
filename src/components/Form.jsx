@@ -4,6 +4,8 @@ import axios from 'axios';
 import * as actions from '../actions/index.js';
 import CurrencyItem from './CurrencyItem.jsx';
 
+const BASE_URL = 'https://api.exchangeratesapi.io/latest?base=';
+
 const mapStateToProps = (state) => state;
 
 const actionCreators = {
