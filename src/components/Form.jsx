@@ -70,7 +70,17 @@ class Form extends React.Component {
 
   handleSelect = (e) => {
     const { target } = e;
-    const { updateLeftSelect, updateRightSelect, updateLeftInput, updateRightInput, baseCurrency, form } = this.props;
+    const {
+      updateLeftSelect,
+      updateRightSelect,
+      updateLeftInput,
+      updateRightInput,
+      updateBaseCurrency,
+      updateProcessState,
+      baseCurrency,
+      form
+    } = this.props;
+
     const selectId = target.id;
     const [selectSide] = selectId.split('-');
     const selectValue = target.value;
