@@ -86,9 +86,13 @@ class Form extends React.Component {
     const selectValue = target.value;
 
     if (selectSide === 'left') {
-      updateLeftSelect({ selectValue });
+      refreshBaseCurrency(selectValue, updateBaseCurrency, updateProcessState);
+
+      updateLeftSelect({ leftSelectCurrency: selectValue });
       updateLeftInput({ leftInputValue: '' });
       updateRightInput({ rightInputValue: '' });
+      updateProcessState({ processState: 'processing' });
+
       return;
     }
 
