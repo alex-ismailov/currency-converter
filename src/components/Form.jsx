@@ -14,7 +14,7 @@ const actionCreators = {
   updateRightInput: actions.updateRightInput,
   updateLeftSelect: actions.updateLeftSelect,
   updateRightSelect: actions.updateRightSelect,
-  // updateProcessState: actions.updateProcessState,
+  updateProcessState: actions.updateProcessState,
 };
 
 const exchangeBaseToNew = (baseValue, rate) => baseValue * rate;
