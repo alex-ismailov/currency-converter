@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import axios from 'axios';
 import * as actions from '../actions/index.js';
 import CurrencyItem from './CurrencyItem.jsx';
 
