@@ -8,6 +8,7 @@ const {
   updateRightInput,
   updateLeftSelect,
   updateRightSelect,
+  updateProcessState,
 } = actions;
 
 const defaultState = {
