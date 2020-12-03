@@ -28,6 +28,11 @@ const refreshBaseCurrency = async (base, updateBaseCurrencyAction, updateProcess
 };
 
 class Form extends React.Component {
+  componentDidMount() {
+    const rightInput = document.getElementById('baseCurrencyInput');
+    rightInput.focus();
+  }
+  
   handleLeftInput = (e) => {
     const { target } = e;
     const { updateLeftInput, updateRightInput, baseCurrency } = this.props;
@@ -45,7 +50,7 @@ class Form extends React.Component {
     const exchangedValue = exchangeBaseToNew(leftInputValue, rate).toFixed(2);
 
     updateLeftInput({ leftInputValue });
-    updateRightInput({ rightInputValue: exchangedValue});
+    updateRightInput({ rightInputValue: exchangedValue });
   };
 
   handleRightInput = (e) => {
@@ -65,7 +70,7 @@ class Form extends React.Component {
     const exchangedValue = exchangeNewToBase(rightInputValue, rate).toFixed(2);
 
     updateRightInput({ rightInputValue });
-    updateLeftInput({ leftInputValue: exchangedValue});
+    updateLeftInput({ leftInputValue: exchangedValue });
   };
 
   handleSelect = (e) => {
@@ -78,7 +83,7 @@ class Form extends React.Component {
       updateBaseCurrency,
       updateProcessState,
       baseCurrency,
-      form
+      form,
     } = this.props;
 
     const selectId = target.id;
@@ -100,20 +105,15 @@ class Form extends React.Component {
     const newCurrencySelect = document.getElementById('right-select');
     const currentNewCurrency = newCurrencySelect.value;
     const rate = baseCurrency.rates[currentNewCurrency];
-    const leftInputValue = form.leftInputValue;
+    const { leftInputValue } = form;
     if (!leftInputValue) {
-      updateRightInput({rightInputValue: ''});
+      updateRightInput({ rightInputValue: '' });
       return;
     }
 
     const exchangedValue = exchangeBaseToNew(leftInputValue, rate).toFixed(2);
-    updateRightInput({ rightInputValue: exchangedValue }); 
+    updateRightInput({ rightInputValue: exchangedValue });
   };
-
-  componentDidMount() {
-    const rightInput = document.getElementById('baseCurrencyInput');
-    rightInput.focus();
-  }
 
   render() {
     const {
@@ -138,9 +138,9 @@ class Form extends React.Component {
           currency={form.leftSelectCurrency}
           currenciesKeys={currenciesKeys}
           handleInput={this.handleLeftInput}
-          inputId={'baseCurrencyInput'}
+          inputId="baseCurrencyInput"
           handleSelect={this.handleSelect}
-          selectId={'left-select'}
+          selectId="left-select"
         />
         <i className="fas fa-exchange-alt" />
         <CurrencyItem
@@ -148,9 +148,9 @@ class Form extends React.Component {
           currency={form.rightSelectCurrency}
           currenciesKeys={currenciesKeys}
           handleInput={this.handleRightInput}
-          inputId={'newCurrencyInput'}
+          inputId="newCurrencyInput"
           handleSelect={this.handleSelect}
-          selectId={'right-select'}
+          selectId="right-select"
         />
       </form>
     );
