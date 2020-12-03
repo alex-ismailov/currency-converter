@@ -47,4 +47,5 @@ const processState = handleActions({
 export default combineReducers({
   baseCurrency,
   form,
+  processState,
 });
