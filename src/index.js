@@ -52,6 +52,7 @@ const initStateTest = {
     rightInputValue: '',
     rightSelectCurrency: 'USD',
   },
+  processState: 'filling',
 };
 
 /* eslint-disable no-underscore-dangle */
