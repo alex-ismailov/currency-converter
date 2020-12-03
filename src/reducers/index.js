@@ -18,8 +18,8 @@ const defaultState = {
 };
 
 const baseCurrency = handleActions({
-    [updateBaseCurrency]: (state, { payload: { updatedBaseCurrency }}) => {
-      return { ...state, baseCurrency: updatedBaseCurrency };
+    [updateBaseCurrency]: (state, { payload: { baseCurrency }}) => {
+      return { ...state, ...baseCurrency };
     },
 }, defaultState.baseCurrency);
 
@@ -37,6 +37,12 @@ const form = handleActions({
     return { ...state, rightSelectCurrency };
   },
 }, defaultState.form);
+
+const processState = handleActions({
+  [updateProcessState]: (state, { payload: { processState }}) => {
+    return processState;
+  },
+}, defaultState.processState);
 
 export default combineReducers({
   baseCurrency,
