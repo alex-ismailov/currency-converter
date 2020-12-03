@@ -121,7 +121,15 @@ class Form extends React.Component {
       form,
     } = this.props;
 
-    const currenciesKeys = Object.keys(baseCurrency.rates);
+    /* ********************************************************************* */
+    /* костыль для EUR, так как его rates не имеет ключа EUR из-за этого он
+    не отрисовывается в left select. */
+    // const currenciesKeys = Object.keys(baseCurrency.rates);
+    const rawCurrenciesKeys = Object.keys(baseCurrency.rates);
+    const currenciesKeys = rawCurrenciesKeys.includes(form.leftSelectCurrency)
+      ? [...rawCurrenciesKeys]
+      : [...rawCurrenciesKeys, form.leftSelectCurrency];
+    /* ********************************************************************* */
 
     return (
       <form className="converter" action="">
