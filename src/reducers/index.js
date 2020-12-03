@@ -14,9 +14,7 @@ const {
 const defaultState = {
   form: {},
   baseCurrency: {},
-  // state: {
-  //   ???
-  // },
+  processState: '',
 };
 
 const baseCurrency = handleActions({
