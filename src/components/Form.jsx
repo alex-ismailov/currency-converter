@@ -131,6 +131,8 @@ class Form extends React.Component {
       : [...rawCurrenciesKeys, form.leftSelectCurrency];
     /* ********************************************************************* */
 
+    currenciesKeys.sort((a, b) => a.localeCompare(b, 'en'));
+
     return (
       <form className="converter" action="">
         <CurrencyItem
